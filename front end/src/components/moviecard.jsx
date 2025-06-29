@@ -15,9 +15,11 @@ function MovieCard({movie}){
         </div>
         <div className="movie-info">
             <h3>{movie.title}</h3>
-            <p>{movie.release_date}</p>
+            <p>{movie.release_date?.split("-")[0]}</p> 
         </div>
     </div>
 }
 
 export default MovieCard;
+
+//Line 18 looks at the release date, (im guessing split("-") reads the hyphens and counts the date as an array)
